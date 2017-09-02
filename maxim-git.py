@@ -1,7 +1,7 @@
 import os
 
 MAXIM_FILE_NAME = '.maxim-git-repos'
-gitCommands = {'fetch': 'git fetch', 'pull': 'git pull --rebase'}
+gitCommands = {'fetch': 'git fetch', 'pull': 'git pull --rebase', 'status': 'git status --short --branch'}
 
 def init():
     dirs = []
@@ -46,5 +46,5 @@ if __name__ == "__main__":
     else:
         commands = []
         for arg in sys.argv[1:]:
-            commands.append(arg)
+            commands.append(gitCommands[arg])
         runInRepos(commands)
