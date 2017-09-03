@@ -5,20 +5,20 @@ gitShorthands = {'fetch': 'git fetch', 'pull': 'git pull --rebase', 'status': 'g
 
 def printHelp():
     print
-    print 'usage: maxim-git help'
+    print 'usage: maxim help'
     print '  or'
-    print '       maxim-git init'
+    print '       maxim init'
     print '  or'
-    print '       maxim-git <git shorthand>...'
+    print '       maxim <git shorthand>...'
     print '  or'
-    print '       maxim-git <command>...'
+    print '       maxim <command>...'
     print ''
     print 'examples:'
-    print "       maxim-git status"
+    print "       maxim status"
     print ''
-    print "       maxim-git 'git checkout master'"
+    print "       maxim 'git checkout master'"
     print ''
-    print "       maxim-git 'ls -la'"
+    print "       maxim 'ls -la'"
 
 
 def init():
@@ -47,7 +47,7 @@ def readRepos():
         return repos
     else:
         print 'run first: init'
-        raise Exception('run first: maxim-git init')
+        raise Exception('run first: maxim init')
 
 def runInRepos(commands):
     repos = readRepos()

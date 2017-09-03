@@ -1,4 +1,4 @@
 #!/bin/bash
-mkdir /opt/maxim-git
-cp ./maxim-git.py /opt/maxim-git/
-cp maxim-git ~/bin/
+cp maxim ~/bin/
+sudo mkdir /opt/maxim-git
+sudo cp ./maxim-git.py /opt/maxim-git/
