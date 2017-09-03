@@ -1,5 +1,5 @@
 # maxim-git
-Machine gun like productivity with multiple git repos.
+Machine gun like productivity with multiple Git repos.
 
 ## Installation
 Install python
@@ -12,3 +12,5 @@ Usage
 ```
 maxim --help
 ```
+## Kudos
+Inspiration from @jteuho's pommit. https://github.com/jteuho/scripts
