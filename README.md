@@ -8,7 +8,7 @@ git clone git@github.com:rjkokko/maxim-git.git
 cd maxim-git
 ./instal-maxim-git.sh
 ```
-Test
+Usage
 ```
 maxim --help
 ```
