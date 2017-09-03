@@ -20,7 +20,7 @@ def printHelp():
     print ''
     print "       maxim 'git checkout master' pull"
     print ''
-    print "       maxim 'ls -la'"
+    print "       maxim pwd 'ls -la'"
 
 
 def init():
