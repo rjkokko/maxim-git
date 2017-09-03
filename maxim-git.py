@@ -12,6 +12,13 @@ def printHelp():
     print '       maxim-git <git shorthand>...'
     print '  or'
     print '       maxim-git <command>...'
+    print ''
+    print 'examples:'
+    print "       maxim-git status"
+    print ''
+    print "       maxim-git 'git checkout master'"
+    print ''
+    print "       maxim-git 'ls -la'"
 
 
 def init():
@@ -44,10 +51,11 @@ def readRepos():
 
 def runInRepos(commands):
     repos = readRepos()
-    for r in repos:
-        os.chdir(r)
+    for repo in repos:
+        print '--------------------------------------'
+        os.chdir(repo)
         for command in commands:
-            print command
+            print './' + repo + '$ ' + command
             ret = os.system(command)
             if ret > 0:
                 raise Exception(ret)
