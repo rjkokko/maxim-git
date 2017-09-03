@@ -14,9 +14,11 @@ def printHelp():
     print '       maxim <command>...'
     print ''
     print 'examples:'
-    print "       maxim status"
+    print "       maxim pull"
     print ''
-    print "       maxim 'git checkout master'"
+    print "       maxim fetch status"
+    print ''
+    print "       maxim 'git checkout master' pull"
     print ''
     print "       maxim 'ls -la'"
 
