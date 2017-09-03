@@ -25,7 +25,7 @@ maxim 'git checkout master' pull
 Run any terminal command. Use quotation marks with arguments.
 ```
 maxim pwd 'ls -la'
-``
+```
 
 ## Kudos
 Inspiration from @jteuho's pommit. https://github.com/jteuho/scripts
