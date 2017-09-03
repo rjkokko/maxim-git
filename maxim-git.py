@@ -25,6 +25,7 @@ def readRepos():
         repos = []
         for line in f:
             repos.append(line.replace('\n', ''))
+        f.close()
         return repos
     else:
         print 'run first: init'
@@ -36,7 +37,9 @@ def runInRepos(commands):
         os.chdir(r)
         for command in commands:
             print command
-            os.system(command)
+            ret = os.system(command)
+            if ret > 0:
+                raise Exception(ret)
         os.chdir('..')
 
 if __name__ == "__main__":
