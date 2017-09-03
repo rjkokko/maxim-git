@@ -8,17 +8,18 @@ git clone git@github.com:rjkokko/maxim-git.git
 cd maxim-git
 ./instal-maxim-git.sh
 ```
-Usage
+Go to the parent directory of your Git repositories and run
 ```
-maxim --help
+maxim init
 ```
+You are ready to shoot commands!
 
 ## Examples
-Fetch and show the statuses
+Fetch remotes and show statuses
 ```
 maxim fetch status
 ```
-Checkout master and pull
+Checkout masters and pull remotes
 ```
 maxim 'git checkout master' pull
 ```
