@@ -6,5 +6,5 @@ Install python.
 ```
 git clone git@github.com:rjkokko/maxim-git.git
 cd maxim-git
-sudo ./instal-maxim-git.sh
+./instal-maxim-git.sh
 ```
