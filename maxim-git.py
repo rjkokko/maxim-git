@@ -1,7 +1,18 @@
 import os
 
 MAXIM_FILE_NAME = '.maxim-git-repos'
-gitCommands = {'fetch': 'git fetch', 'pull': 'git pull --rebase', 'status': 'git status --short --branch'}
+gitShorthands = {'fetch': 'git fetch', 'pull': 'git pull --rebase', 'status': 'git status --short --branch'}
+
+def printHelp():
+    print
+    print 'usage: maxim-git help'
+    print '  or'
+    print '       maxim-git init'
+    print '  or'
+    print '       maxim-git <git shorthand>...'
+    print '  or'
+    print '       maxim-git <command>...'
+
 
 def init():
     dirs = []
@@ -29,7 +40,7 @@ def readRepos():
         return repos
     else:
         print 'run first: init'
-        raise Exception('run first: python maxim-git init')
+        raise Exception('run first: maxim-git init')
 
 def runInRepos(commands):
     repos = readRepos()
@@ -44,10 +55,15 @@ def runInRepos(commands):
 
 if __name__ == "__main__":
     import sys
-    if sys.argv[1] == 'init':
+    if len(sys.argv) < 2 or sys.argv[1] == 'help' or sys.argv[1] == '--help' or sys.argv[1] == '-h':
+        printHelp()
+    elif sys.argv[1] == 'init':
         init()
     else:
         commands = []
         for arg in sys.argv[1:]:
-            commands.append(gitCommands[arg])
+            if arg in gitShorthands:
+                commands.append(gitShorthands[arg])
+            else:
+                commands.append(arg)
         runInRepos(commands)
