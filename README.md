@@ -2,7 +2,7 @@
 Machine gun like productivity with multiple Git repos. Runs given commands in Git subdirectories. 
 
 ## Installation
-Install python
+Install python.
 ```
 git clone git@github.com:rjkokko/maxim-git.git
 cd maxim-git
