@@ -5,13 +5,17 @@ gitShorthands = {'fetch': 'git fetch', 'pull': 'git pull --rebase', 'status': 'g
 
 def printHelp():
     print
-    print 'usage: maxim help'
-    print '  or'
-    print '       maxim init'
-    print '  or'
-    print '       maxim <git shorthand>...'
-    print '  or'
-    print '       maxim <command>...'
+    print 'maxim [help] [init] [git_shorthand]... [command]...'
+    print ''
+    print 'init'
+    print '        Creates .maxim-git-repos files'
+    print 'git_shorthand>...'
+    print '        Available commands are'
+    print '        fetch'
+    print '        pull'
+    print '        status'
+    print '<command>...'
+    print '        Any bash command.'
     print ''
     print 'examples:'
     print "       maxim pull"
